@@ -3,10 +3,10 @@ filename = RunMatrix
 all: build run
 
 build:
-	javac $(filename).java
+	javac RunMatrix.java
 
 run:
-	java $(filename)
+	java RunMatrix.java
 
 clean:
-	rm $(filename).class
+	rm RunMatrix.class
