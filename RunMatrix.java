@@ -37,7 +37,7 @@ public class RunMatrix {
         // Load the table with values
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
-                table[row][col] = ((row * input) + col);
+                table[row][col] = ((row * input) + col + 1);
             }
         }
 
