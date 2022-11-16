@@ -8,6 +8,11 @@ public class RunMatrix {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
 
+        System.out.println();
+        System.out.println("Your matrix is " + input + " x " + input);
+        System.out.println();
+
+
         int[][] table = new int[input][input];
 
         // Load the table with zeros
