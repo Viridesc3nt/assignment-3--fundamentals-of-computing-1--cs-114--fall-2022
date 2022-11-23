@@ -11,7 +11,7 @@ public class RunMatrix {
         System.out.println();
         System.out.println("Your matrix is " + input + " x " + input);
         System.out.println();
-
+        System.out.println("Printing matrix with default values:");
 
         int[][] table = new int[input][input];
 
@@ -32,7 +32,7 @@ public class RunMatrix {
         }
 
         System.out.println();
-
+        System.out.println("Printing matrix:");
 
         // Load the table with values
         for (int row = 0; row < table.length; row++) {
@@ -47,7 +47,8 @@ public class RunMatrix {
                 System.out.print (table[row][col] + "\t");
             }
 
-                System.out.println();
+        System.out.println();
+
         }
     }
 }
