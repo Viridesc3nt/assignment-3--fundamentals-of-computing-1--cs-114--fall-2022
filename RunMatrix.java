@@ -22,7 +22,7 @@ public class RunMatrix {
             }
         }
 
-        // Print the zeros table
+        // Print the default table
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
@@ -48,7 +48,17 @@ public class RunMatrix {
             }
 
         System.out.println();
+        }
 
+        for(int row = 0; row < col; ){
+            swap(table[row][col], table[col - 1][col-1);
+
+        }
+
+        for (int row = 0; row < col; ++i) {
+            for (int col = 0; col < input; ++j)
+                printf("%d  ", table[row][col]);
+                printf("\n");
         }
     }
 }
