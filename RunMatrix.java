@@ -3,10 +3,15 @@ import java.util.Scanner;
 public class RunMatrix {
     public static void main(String[] args) {
 
+        final String ANSI_YELLOW = "\u001B[33m";
+        final String ANSI_RESET = "\u001B[0m";
+
         System.out.print("Please enter the size of your matrix: ");
 
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
+
+        int yellowDiag = input;
 
         System.out.println();
         System.out.println("Your matrix is " + input + " x " + input);
@@ -27,8 +32,7 @@ public class RunMatrix {
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
             }
-
-                System.out.println();
+            System.out.println();
         }
 
         System.out.println();
@@ -46,19 +50,7 @@ public class RunMatrix {
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
             }
-
-        System.out.println();
-        }
-
-        for(int row = 0; row < col; ){
-            swap(table[row][col], table[col - 1][col-1);
-
-        }
-
-        for (int row = 0; row < col; ++i) {
-            for (int col = 0; col < input; ++j)
-                printf("%d  ", table[row][col]);
-                printf("\n");
+            System.out.println();
         }
     }
 }

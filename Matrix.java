@@ -5,7 +5,6 @@ public class Matrix{
     private int matrix;
     private int[][] table = new int[matrix][matrix];
 
-
     private Matrix(){
 
         System.out.print("Please enter the size of your matrix: ");
@@ -18,7 +17,6 @@ public class Matrix{
     }
 
     private void swap(){
-
     }
 
     public void printMatrix(){
