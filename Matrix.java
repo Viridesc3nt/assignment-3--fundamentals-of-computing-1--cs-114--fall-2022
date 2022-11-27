@@ -32,7 +32,6 @@ public class Matrix{
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
             }
-
                 System.out.println();
         }
     }
