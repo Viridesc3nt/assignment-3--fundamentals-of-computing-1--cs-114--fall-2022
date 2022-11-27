@@ -3,27 +3,20 @@ import java.util.Scanner;
 public class RunMatrix {
     public static void main(String[] args) {
 
-        final String ANSI_YELLOW = "\u001B[33m";
-        final String ANSI_RESET = "\u001B[0m";
-
         System.out.print("Please enter the size of your matrix: ");
 
         Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
+        int matrix = scanner.nextInt();
 
-        int yellowDiag = input;
+        int[][] table = new int[matrix][matrix];
 
         System.out.println();
-        System.out.println("Your matrix is " + input + " x " + input);
-        System.out.println();
-        System.out.println("Printing matrix with default values:");
-
-        int[][] table = new int[input][input];
+        System.out.println("Your matrix is " + matrix + " x " + matrix);
 
         // Load the table with zeros
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
-                table[row][col] = (0 * input);
+                table[row][col] = (0 * matrix);
             }
         }
 
@@ -41,7 +34,7 @@ public class RunMatrix {
         // Load the table with values
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
-                table[row][col] = ((row * input) + col + 1);
+                table[row][col] = ((row * matrix) + col + 1);
             }
         }
 
@@ -49,6 +42,27 @@ public class RunMatrix {
         for (int row = 0; row < table.length; row++) {
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("Printing flipped matrix:");
+
+
+        // Swapping values of the table
+        for (int row = 0; row < matrix / 2; row++) {
+            for (int col = 0; col < matrix; col++) {
+                int swap = table[row][col];
+                table[row][col] = table[matrix - 1 - row][matrix - 1 - col];
+                table[matrix - 1 - row][matrix - 1 - col] = swap;
+            }
+        }
+
+        // Print swapped table
+        for (int row = 0; row < matrix; row++) {
+            for (int col = 0; col < matrix; col++) {
+                System.out.print(table[row][col]+ "\t");
             }
             System.out.println();
         }
