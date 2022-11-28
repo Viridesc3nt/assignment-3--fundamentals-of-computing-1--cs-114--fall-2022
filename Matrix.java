@@ -17,6 +17,13 @@ public class Matrix{
     }
 
     private void swap(){
+        for (int row = 0; row < matrix / 2; row++) {
+            for (int col = 0; col < matrix; col++) {
+                int swappedNumber = table[row][col];
+                table[row][col] = table[matrix - 1 - row][matrix - 1 - col];
+                table[matrix - 1 - row][matrix - 1 - col] = swappedNumber;
+            }
+        }
     }
 
     public void printMatrix(){
@@ -60,5 +67,12 @@ public class Matrix{
 
     public void flipMatrix(){
 
+        // Print flipped table
+         for (int row = 0; row < matrix; row++) {
+            for (int col = 0; col < matrix; col++) {
+                System.out.print (table[row][col]+ "\t");
+            }
+            System.out.println();
+        }
     }
 }

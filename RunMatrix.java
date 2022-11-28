@@ -9,8 +9,6 @@ public class RunMatrix {
         int matrix = scanner.nextInt();
 
         int[][] table = new int[matrix][matrix];
-        final String ANSI_YELLOW = "\u001B[33m";
-        final String ANSI_RESET = "\u001B[0m";
 
         System.out.println();
         System.out.println("Your matrix is " + matrix + " x " + matrix);
@@ -27,7 +25,7 @@ public class RunMatrix {
             for (int col = 0; col < table[row].length; col++) {
                 System.out.print (table[row][col] + "\t");
             }
-                System.out.println();
+            System.out.println();
         }
 
 
@@ -63,7 +61,7 @@ public class RunMatrix {
             }
         }
 
-        // Print swapped table
+        // Print flipped table
         for (int row = 0; row < matrix; row++) {
             for (int col = 0; col < matrix; col++) {
                 System.out.print (table[row][col]+ "\t");
